@@ -30,7 +30,7 @@ jobs:
      if: success()
      runs-on: self-hosted
      steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4 # This action itself performs a git clone, which includes fetching the history.
-      - name: Pull latest changes (if needed)
-        run: git pull origin main # Pulls changes from the 'main' branch of the 'origin' remote.
+      - name: Deploy to production server
+        run: |
+          cd ~/tvpo_lab3
+          git pull origin main
